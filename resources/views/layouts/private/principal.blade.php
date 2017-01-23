@@ -9,8 +9,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 
-		{!! Html::Style('assets/images/logo/Logo.ico') !!}
-		<link rel="icon" type="image/ico" href="assets/images/logo/Logo.ico" />
+
+		<link rel="icon" type="image/ico" href="{{ asset('assets/images/logo/Logo.ico') }}" />
 
 
 		{!! Html::Style('assets/css/bootstrap.min.css') !!}
