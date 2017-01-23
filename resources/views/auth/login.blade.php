@@ -6,7 +6,18 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
+
+
                 <div class="panel-body">
+                     <br>
+                    <div class="col-md-12 center-block quitar-float text-center espacio-arriba">
+                    <img class="logoLogin" src="assets/images/logo/LogoLogin.png" >
+                    </div>
+
+                    </br></br>
+
+
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
