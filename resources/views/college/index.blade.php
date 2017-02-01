@@ -2,6 +2,12 @@
 @extends('layouts.private.adminCollege.menu')
 
 @section('content')
+    <h1>Colegios</h1>
+    <a href="{{ url('college/create') }}" class="btn btn-success">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Nuevo Colegio
+    </a>
+
     <div class="container col-md-9 center-block quitar-float text-center espacio-arriba">
 
 
