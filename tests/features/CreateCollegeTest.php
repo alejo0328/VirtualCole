@@ -30,7 +30,7 @@ class CreateCollegeTest extends FeatureTestCase
         ]);
 
 
-         $this->see('h1',$nameCollege)
+         $this->see($nameCollege)
         ;
 
 
