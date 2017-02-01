@@ -28,3 +28,8 @@ Route::post('college/create',[
    'uses'=>'CreateCollegeController@store',
     'as'=>'college.store'
 ]);
+
+Route::get('college',[
+    'uses'=>'CreateCollegeController@index',
+    'as'=>'college.index'
+]);

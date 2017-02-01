@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 class CreateCollegeController extends Controller
 {
     //
+    public function  index(){
+
+        $colleges = College::all();
+        return view('college.index',compact('colleges'));
+    }
 
     public function create(){
         return view('college.create');
@@ -18,7 +23,7 @@ class CreateCollegeController extends Controller
 
         auth()->user()->colleges()->save($college);
 
-        return $college->name;
+        return redirect('college');
 
     }
 }
