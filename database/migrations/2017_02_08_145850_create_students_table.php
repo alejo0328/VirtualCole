@@ -23,6 +23,9 @@ class CreateStudentsTable extends Migration
             $table->string('dni');
             $table->string('sex');
 
+            $table->integer('college_id')->unsigned();
+            $table->foreign('college_id')->references('id')->on('colleges');
+
         });
     }
 

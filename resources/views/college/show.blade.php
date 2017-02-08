@@ -2,10 +2,10 @@
 @extends('layouts.private.adminCollege.menu')
 
 @section('content')
-    <h1>Colegios</h1>
-    <a href="{{ url('college/create') }}" class="btn btn-success">
+    <h1>{{$college->name}}</h1>
+    <a href="{{URL::action('StudentController@create',$college->id) }}" class="btn btn-success">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        Nuevo Colegio
+        Agregar Estudiante
     </a>
 
     <div class="container col-md-9 center-block text-center espacio-arriba">
@@ -13,27 +13,27 @@
 
         <table class="table table-hover">
             <tr>
-                <td>NOMBRE</td>
+                <td>DNI</td>
+                <td>APELLIDOS</td>
+                <td>NOMBRES</td>
+                <td>SEXO</td>
                 <td>OPERACIONES</td>
 
             </tr>
-            @foreach($colleges as $college)
 
+            @foreach($college->students as $student)
                 <tr>
-                    <td>{{$college->name}}</td>
+                    <td>{{$student->dni}}</td>
+                    <td>{{$student->lastName}}</td>
+                    <td>{{$student->firstName}}</td>
+                    <td>{{$student->sex}}</td>
                     <td>
-                        <a href="{{URL::action('CreateCollegeController@show',$college->id) }}" class="btn btn-info" value={{$college->id}}>
+                        <a href="#" class="btn btn-info" value={{$college->id}}>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                         </a>
-                        <a href="#" class="btn btn-danger" value={{$college->id}}>
-                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                        </a>
                     </td>
-
                 </tr>
-
             @endforeach
         </table>
-
     </div>
 @endsection

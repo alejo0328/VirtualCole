@@ -39,3 +39,13 @@ Route::get('college/{college}',[
     'as'=>'college.show'
 ]);
 
+Route::get('college/{college}/student/create',[
+   'uses'=>'StudentController@create',
+    'as'=>'student.create'
+]);
+
+Route::post('college/{college}/student/create',[
+    'uses'=>'StudentController@store',
+    'as'=>'student.store'
+]);
+

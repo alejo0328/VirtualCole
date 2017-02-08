@@ -27,6 +27,7 @@ class CreateCollegeController extends Controller
 
     }
     public function show(College $college){
-        return $college->name;
+
+        return view('college.show', compact('college'));
     }
 }
