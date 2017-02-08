@@ -54,3 +54,23 @@ Route::post('college/{college}/student/create',[
     'as'=>'student.store'
 ]);
 
+
+Route::get('course',[
+   'uses'=>'CourseController@index',
+    'as'=>'course.index'
+]);
+
+Route::get('course/create',[
+    'uses'=>'CourseController@create',
+    'as'=>'course.create'
+]);
+
+Route::post('course/create',[
+    'uses'=>'CourseController@store',
+    'as'=>'course.store'
+]);
+
+Route::get('course/delete/{course}',[
+    'uses'=>'CourseController@delete',
+    'as'=>'course.delete'
+]);

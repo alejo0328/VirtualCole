@@ -49,6 +49,14 @@
             </li>
 
             <li class="">
+                <a href="{{ url('course') }}">
+                    <i class="menu-icon fa fa-tachometer"></i>
+                    <span class="menu-text"> Cursos </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
                     <span class="menu-text">
