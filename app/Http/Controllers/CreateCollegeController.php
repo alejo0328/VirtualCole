@@ -26,4 +26,7 @@ class CreateCollegeController extends Controller
         return redirect('college');
 
     }
+    public function show(College $college){
+        return $college->name;
+    }
 }

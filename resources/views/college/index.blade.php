@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{$college->name}}</td>
                     <td>
-                        <a href="#" class="btn btn-info" value={{$college->id}}>
+                        <a href="{{URL::action('CreateCollegeController@show',$college->id) }}" class="btn btn-info" value={{$college->id}}>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                         </a>
                         <a href="#" class="btn btn-danger" value={{$college->id}}>

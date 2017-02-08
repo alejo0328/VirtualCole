@@ -33,3 +33,9 @@ Route::get('college',[
     'uses'=>'CreateCollegeController@index',
     'as'=>'college.index'
 ]);
+
+Route::get('college/{college}',[
+    'uses'=>'CreateCollegeController@show',
+    'as'=>'college.show'
+]);
+
