@@ -24,6 +24,11 @@ Route::get('college/create',[
     'as'=>'college.create'
 ]);
 
+Route::get('college/delete/{college}',[
+    'uses'=>'CreateCollegeController@delete',
+    'as'=>'college.delete'
+]);
+
 Route::post('college/create',[
    'uses'=>'CreateCollegeController@store',
     'as'=>'college.store'

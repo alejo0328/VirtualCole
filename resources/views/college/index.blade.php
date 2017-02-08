@@ -14,6 +14,7 @@
         <table class="table table-hover">
             <tr>
                 <td>NOMBRE</td>
+                <td>ESTUDIANTES</td>
                 <td>OPERACIONES</td>
 
             </tr>
@@ -21,11 +22,12 @@
 
                 <tr>
                     <td>{{$college->name}}</td>
+                    <td>{{count($college->students)}}</td>
                     <td>
                         <a href="{{URL::action('CreateCollegeController@show',$college->id) }}" class="btn btn-info" value={{$college->id}}>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                         </a>
-                        <a href="#" class="btn btn-danger" value={{$college->id}}>
+                        <a href="{{URL::action('CreateCollegeController@delete',$college->id) }}" class="btn btn-danger" value={{$college->id}}>
                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                         </a>
                     </td>

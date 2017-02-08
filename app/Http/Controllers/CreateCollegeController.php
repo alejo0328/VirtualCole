@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\College;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CreateCollegeController extends Controller
 {
@@ -29,5 +30,11 @@ class CreateCollegeController extends Controller
     public function show(College $college){
 
         return view('college.show', compact('college'));
+    }
+
+    public function delete(College $college){
+        $college->delete();
+
+        return Redirect('college');
     }
 }
