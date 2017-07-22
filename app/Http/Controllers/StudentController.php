@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 class StudentController extends Controller
 {
     public function index(){
-
+        $estudiantes=Student::all();
+        
     }
 
     public function create(College $college){

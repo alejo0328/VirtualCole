@@ -23,6 +23,7 @@
                 <tr>
                     <td>{{$course->name}}</td>
                     <td>{{$course->credits}}</td>
+                    <td>{{$course->college->name}}</td>
                     <td>
                         <a href="#" class="btn btn-info" value={{$course->id}}>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>

@@ -44,6 +44,10 @@ Route::get('college/{college}',[
     'as'=>'college.show'
 ]);
 
+Route::get('students',[
+    'uses'=>'StudentController@index',
+    'as'=>'estudiantes']);
+
 Route::get('college/{college}/student/create',[
    'uses'=>'StudentController@create',
     'as'=>'student.create'
@@ -74,3 +78,15 @@ Route::get('course/delete/{course}',[
     'uses'=>'CourseController@delete',
     'as'=>'course.delete'
 ]);
+
+
+
+
+Route::get('/registrofans','FansController@create');
+
+Route::post('/store',[
+    'uses'=>'FansController@store',
+    'as'=>'registro',
+    ]);
+
+Route::get('/fans','FansController@index');
